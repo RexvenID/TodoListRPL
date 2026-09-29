@@ -41,7 +41,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://nurtrisnawatib.github.io/ToDoList/
+      url: https://nurtrisnawatib.github.io/TodoListRPL/
     runs-on: ubuntu-latest
     needs: build
     steps:
