@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { TaskProvider } from './context/TaskContext';
 import Login from './pages/Login';
@@ -10,7 +10,7 @@ function App() {
   return (
     <AuthProvider>
       <TaskProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             {/* Public routes */}
             <Route path="/" element={<Navigate to="/login" replace />} />
@@ -37,7 +37,7 @@ function App() {
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </TaskProvider>
     </AuthProvider>
   );
